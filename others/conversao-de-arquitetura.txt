@@ -1,0 +1,15 @@
+Para iniciar a conversão da arquitetura MVC (Model-View-Controller) para a arquitetura limpa (clean architecture),
+foi necessário dar o primeiro passo para identificar e definir as entidades de negócio,
+que representam os conceitos fundamentais do domínio da aplicação.
+Criamos, inclusive, um pacote chamado Domain (domínio) para centralizar essas entidades.
+
+Essas entidades encapsulam o estado e o comportamento da aplicação e são independentes de qualquer detalhe de implementação.
+Para nosso contexto, definimos a entidade Usuário, que é quem vai efetivamente logar na aplicação e realizar a compra dos ingressos no site CodeChella.
+
+Depois que implementarmos as regras de negócio, poderemos realizar testes e validações diversas.
+Um aspecto fundamental da clean architecture é a testabilidade do código.
+Como as camadas são independentes e os casos de uso são isolados, é fácil escrever testes automatizados para validar o comportamento da aplicação em diferentes cenários e condições.
+
+O termo arquitetura "limpa" é usado justamente por promover uma separação clara de responsabilidades entre os diferentes componentes da aplicação,
+tornando o código mais fácil de entender, manter e testar.
+O uso dessa arquitetura favorece o Test-Driven Development (TDD), que é uma abordagem de desenvolvimento de software onde os testes automatizados são escritos antes do código de produção.

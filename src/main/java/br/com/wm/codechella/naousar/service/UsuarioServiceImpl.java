@@ -1,7 +1,7 @@
-package br.com.wm.codechella.service;
+package br.com.wm.codechella.naousar.service;
 
-import br.com.wm.codechella.model.Usuario;
-import br.com.wm.codechella.repository.UsuarioRepository;
+import br.com.wm.codechella.naousar.model.Usuario;
+import br.com.wm.codechella.naousar.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

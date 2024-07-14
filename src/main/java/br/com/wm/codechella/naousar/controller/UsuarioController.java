@@ -1,7 +1,7 @@
-package br.com.wm.codechella.controller;
+package br.com.wm.codechella.naousar.controller;
 
-import br.com.wm.codechella.model.Usuario;
-import br.com.wm.codechella.service.UsuarioService;
+import br.com.wm.codechella.naousar.model.Usuario;
+import br.com.wm.codechella.naousar.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

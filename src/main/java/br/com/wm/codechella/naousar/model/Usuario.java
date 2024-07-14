@@ -1,4 +1,4 @@
-package br.com.wm.codechella.model;
+package br.com.wm.codechella.naousar.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
