@@ -1,0 +1,22 @@
+Arquitetura hexagonal (hexagonal architecture)
+Também conhecida como arquitetura ports and adapters, foi proposta por Alistair Cockburn em 2005.
+Na arquitetura hexagonal, o núcleo da aplicação, que contém a lógica de negócios,
+é isolado de qualquer detalhe de implementação, como interfaces com banco de dados,
+interfaces com usuário, serviços externos etc.
+Isso é alcançado através do conceito de "portas" (ports) e "adaptadores" (adapters):
+
+Portas (ports): são as interfaces que definem os contratos entre o núcleo da aplicação e os componentes externos.
+Por exemplo, uma porta pode ser uma interface que define métodos para acessar os dados do banco de dados ou para lidar com solicitações HTTP.
+
+Adaptadores (adapters): são as implementações concretas das portas.
+Eles conectam o núcleo da aplicação com os componentes externos, traduzindo as chamadas de métodos do núcleo para as APIs específicas desses componentes externos.
+Por exemplo, um adaptador pode implementar a interface de acesso ao banco de dados usando JDBC ou Hibernate.
+
+A arquitetura hexagonal promove a modularidade e a reutilização do código,
+pois cada componente pode ser substituído ou alterado sem afetar o resto do sistema,
+desde que mantenha o contrato definido pelas portas.
+Isso também facilita a testabilidade, pois permite a substituição de implementações reais por mocks ou stubs durante os testes unitários.
+
+Além disso, ela facilita a integração com sistemas externos, como APIs de terceiros,
+sistemas legados e serviços em nuvem, pois essas integrações são tratadas por adaptadores
+que podem ser facilmente substituídos ou reconfigurados.

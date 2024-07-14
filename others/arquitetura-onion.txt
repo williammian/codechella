@@ -1,0 +1,23 @@
+Arquitetura onion (onion architecture)
+Proposta por Jeffrey Palermo, a arquitetura onion (literalmente arquitetura de cebola,
+em inglês) é baseada no princípio de inversão de dependência.
+A ideia central por trás da onion architecture é organizar o código em camadas concêntricas,
+em que o núcleo da aplicação é representado pela camada mais interna e as camadas externas correspondem a detalhes de implementação,
+como a interface do usuário e o acesso a dados. Essas camadas são organizadas hierarquicamente,
+com a camada mais interna não conhecendo as camadas externas, mas as camadas externas conhecendo e dependendo das camadas internas.
+
+As camadas típicas em uma arquitetura de cebola incluem:
+
+Domínio (core domain): é a camada mais interna e contém a lógica de negócios central da aplicação.
+Ela é independente de qualquer detalhe de implementação e geralmente consiste em entidades, serviços e objetos de valor que representam conceitos do domínio do problema.
+
+Camada de aplicação (application layer): esta camada orquestra o fluxo de controle da aplicação e coordena as interações entre a camada de domínio e as camadas externas.
+Ela geralmente contém serviços de aplicação que encapsulam a lógica de aplicação específica e coordenam a execução das operações do domínio.
+
+Camada de infraestrutura (infrastructure layer): é a camada externa responsável pela interação com o ambiente externo, como bancos de dados, sistemas de arquivos, serviços web etc.
+Ela inclui adaptadores e implementações concretas para lidar com detalhes de infraestrutura. É importante notar que as camadas internas não conhecem detalhes específicos da infraestrutura,
+pois essa comunicação é feita através de interfaces definidas na camada de domínio.
+
+Essa arquitetura promove a separação clara de preocupações, tornando o código mais fácil de entender, manter e testar.
+Além disso, ao inverter as dependências, ela torna o código mais flexível e adaptável a mudanças, uma vez que as camadas internas não dependem das camadas externas,
+o que facilita a substituição ou a alteração de detalhes de implementação sem afetar o núcleo da aplicação.
