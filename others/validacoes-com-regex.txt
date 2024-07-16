@@ -1,0 +1,93 @@
+Validações com Regex
+
+É muito comum o uso de Regex nas aplicações Java para validações de alguns campos.
+O termo Regex é a abreviação de Expressões Regulares, uma ferramenta poderosa usada para buscar, encontrar e manipular texto de acordo com padrões definidos.
+Imagine que você tem um grande livro e quer encontrar todas as vezes que uma palavra específica aparece, mas com algumas condições especiais,
+como estar no início de uma frase ou seguida por outra palavra específica.
+Fazer isso manualmente levaria horas, mas com Regex você pode fazer essa busca em segundos!
+
+Aprender Regex pode parecer intimidador no início devido à sua sintaxe única, mas uma vez que você entende como funciona,
+abre-se um mundo de possibilidades para processamento de texto, validação de dados (como e-mails e números de telefone) e até mesmo para uso em programação e desenvolvimento web.
+É uma habilidade valiosa em muitas áreas da tecnologia.
+
+Vamos revisar rapidamente algumas construções básicas de Regex:
+
+. (ponto): representa qualquer caractere.
+* (asterisco): zero ou mais ocorrências do caractere anterior.
++ (mais): uma ou mais ocorrências do caractere anterior.
+? (interrogação): zero ou uma ocorrência do caractere anterior.
+[] (colchetes): um conjunto de caracteres. Por exemplo, [abc] corresponde a a, b, ou c.
+() (parênteses): agrupa expressões como uma única unidade.
+^ (circunflexo): início de uma linha.
+$ (cifrão): final de uma linha.
+
+Vamos ver alguns exemplos de validação a seguir.
+
+Validação de e-mail
+
+import java.util.regex.Pattern;
+
+public class ValidaEmail{
+    private static final String EMAIL_PATTERN = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+    private static final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+
+    public static boolean emailValido(String email) {
+        return pattern.matcher(email).matches();
+    }
+
+    public static void main(String[] args) {
+        String email = "example@email.com";
+        if (emailValido(email)) {
+            System.out.println("E-mail válido.");
+        } else {
+            System.out.println("E-mail inválido.");
+        }
+    }
+}
+
+Validação de telefone
+
+import java.util.regex.Pattern;
+
+public class ValidaTelefone{
+    private static final String PHONE_NUMBER_PATTERN = "^\\d{4}-\\d{4}$";
+    private static final Pattern pattern = Pattern.compile(PHONE_NUMBER_PATTERN);
+
+    public static boolean telefoneValido(String phoneNumber) {
+        return pattern.matcher(phoneNumber).matches();
+    }
+
+    public static void main(String[] args) {
+        String phoneNumber = "1234-5678";
+        if (telefoneValido(phoneNumber)) {
+            System.out.println("Número de telefone válido.");
+        } else {
+            System.out.println("Número de telefone inválido.");
+        }
+    }
+}
+
+Validação de CEP
+
+import java.util.regex.Pattern;
+
+public class ValidaCEP{
+    private static final String CEP_PATTERN = "^\\d{5}-\\d{3}$";
+    private static final Pattern pattern = Pattern.compile(CEP_PATTERN);
+
+    public static boolean cepValido(String cep) {
+        return pattern.matcher(cep).matches();
+    }
+
+    public static void main(String[] args) {
+        String cep = "12345-678";
+        if (cepValido(cep)) {
+            System.out.println("CEP válido.");
+        } else {
+            System.out.println("CEP inválido.");
+        }
+    }
+}
+
+Esses são apenas alguns exemplos simples de validações usando expressões regulares em Java.
+Lembre-se de que as regex podem ser personalizadas conforme necessário para atender aos requisitos específicos do seu aplicativo.

@@ -1,0 +1,118 @@
+Padrões Builder e Factory
+
+Ao desenvolver software, é comum utilizarmos padrões de projeto para solucionar situações que costumam ser recorrentes.
+Podemos citar dois padrões que são altamente utilizados, que são os padrões Builder e Factory. Vejamos as diferenças entre eles.
+
+Factory method (fábrica)
+O Factory method é um padrão de projeto de criação que lida com a criação de objetos sem especificar a classe exata do objeto que será criado.
+Em vez disso, ele define uma interface para criar objetos, mas permite que as subclasses alterem o tipo de objetos que serão criados.
+Isso é útil quando você quer delegar a criação de objetos para subclasses ou quando você não sabe antecipadamente o tipo exato de objetos que serão necessários.
+Vejamos um exemplo:
+
+Suponha que você tenha uma interface Transporte e duas implementações diferentes: Carro e Moto.
+Você pode usar o padrão factory para criar instâncias dessas implementações sem expor a lógica de criação ao cliente.
+
+public interface Transporte {
+    void deliver();
+}
+
+public class Carro implements Transporte {
+    @Override
+    public void entrega() {
+        System.out.println("Entrega feita por um carro");
+    }
+}
+
+public class Moto implements Transporte {
+    @Override
+    public void entrega() {
+        System.out.println("Entrega feita por uma moto");
+    }
+}
+
+public class TransporteFactory {
+    public static Transporte criaTransporteEntrega(String type) {
+        if (type.equalsIgnoreCase("Carro")) {
+            return new Carro();
+        } else if (type.equalsIgnoreCase("Moto")) {
+            return new Moto();
+        }
+        return null;
+    }
+}
+
+Com a implementação acima, faríamos a criação das instâncias de transporte usando a fábrica sem nos preocuparmos com a lógica de criação:
+
+Transporte carro = TransporteFactory.criaTransporteEntrega("Carro");
+Transporte moto = TransporteFactory.criaTransporteEntrega("Moto");
+
+carro.entrega(); // Saída: Delivering by car
+moto.entrega(); // Saída: Entrega feita por uma moto
+
+
+Builder
+O Builder é usado para construir um objeto complexo passo a passo.
+Ele permite que você produza diferentes tipos e representações de um objeto usando o mesmo código de construção.
+Geralmente, ele é usado quando o construtor de um objeto tem muitos parâmetros opcionais ou quando a criação de um objeto envolve várias etapas complicadas.
+
+Vamos exemplificar com algo que é geralmente uma paixão de todos: pizza! Suponha que você esteja construindo uma classe Pizza que pode ter vários ingredientes opcionais.
+Em vez de ter vários construtores com diferentes combinações de ingredientes, você pode usar o padrão builder para construir uma pizza passo a passo.
+
+public class Pizza {
+    private String massa;
+    private String molho;
+    private boolean queijo;
+    private boolean calabresa;
+    private boolean champignon;
+
+    public Pizza(PizzaBuilder builder) {
+        this.massa = builder.massa;
+        this.molho = builder.molho;
+        this.queijo = builder.queijo;
+        this.calabresa = builder.calabresa;
+        this.champignon = builder.champignon;
+    }
+
+    public static class PizzaBuilder {
+        private String massa;
+        private String molho;
+        private boolean queijo;
+        private boolean calabresa;
+        private boolean champignon;
+
+        public PizzaBuilder(String massa, String molho) {
+            this.massa = massa;
+            this.molho = molho;
+        }
+
+        public PizzaBuilder queijo(boolean queijo) {
+            this.queijo = queijo;
+            return this;
+        }
+
+        public PizzaBuilder calabresa(boolean calabresa) {
+            this.calabresa = calabresa;
+            return this;
+        }
+
+        public PizzaBuilder champignon(boolean champignon) {
+            this.champignon = champignon;
+            return this;
+        }
+
+        public Pizza build() {
+            return new Pizza(this);
+        }
+    }
+}
+
+Agora podemos construir a pizza com diferentes ingredientes de forma flexível, por exemplo:
+
+Pizza pizza = new Pizza.PizzaBuilder("Tradicional", "Tomate com manjericão")
+            .queijo(true)
+            .calabresa(true)
+            .champignon(true)
+            .build();
+
+Esses foram dois exemplos simplificados dos padrões factory e builder em ação.
+Eles ilustram como esses padrões podem ser usados para criar objetos de forma flexível e desacoplada em diferentes situações.

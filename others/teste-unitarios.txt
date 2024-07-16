@@ -1,0 +1,91 @@
+Testes Unitários
+
+Testes unitários de software são uma prática de testes automatizados que se concentra em testar unidades individuais de código,
+como métodos ou funções, de forma isolada do resto do sistema. Uma unidade pode ser uma classe, um módulo, uma função ou até mesmo uma linha de código, dependendo do contexto.
+
+O objetivo dos testes unitários é verificar se cada unidade de código funciona conforme o esperado e produz os resultados corretos para diferentes entradas.
+Isso é feito através da criação de casos de teste que exercitam os diversos caminhos de execução da unidade de código e verificam se o comportamento observado é consistente com o esperado.
+
+Os testes unitários seguem geralmente uma abordagem de três etapas:
+
+Preparação (setup): são criados todos os objetos e configurações necessários para executar o teste.
+Isso pode incluir a inicialização de objetos, a configuração de variáveis de ambiente, a preparação de dados de entrada etc.
+
+Execução (execution): o método ou função sendo testado é chamado com os dados de entrada preparados na etapa anterior.
+O objetivo é executar o código sob teste em diferentes cenários para garantir que ele produza os resultados esperados.
+
+Verificação (assertion): os resultados produzidos pelo código sob teste são comparados com os resultados esperados.
+Se os resultados não forem consistentes, o teste falhará e indicará que há um problema no código.
+Caso contrário, o teste passará e confirmará que a unidade de código está funcionando corretamente.
+Os testes unitários são frequentemente escritos usando frameworks de teste específicos da linguagem, como JUnit para Java, NUnit para .NET, pytest para Python, entre outros.
+Esses frameworks fornecem ferramentas para facilitar a criação, execução e análise de testes unitários,
+bem como para integrá-los facilmente aos processos de desenvolvimento de software existentes.
+
+Os benefícios dos testes unitários incluem a detecção precoce de bugs, a facilitação da refatoração de código,
+a documentação viva do comportamento do código e a promoção da confiança na qualidade do software.
+Eles também ajudam a garantir que mudanças feitas em uma parte do código não quebrem inadvertidamente outras partes, pois os testes podem alertar sobre regressões potenciais.
+
+Testes unitários são a base do TDD. Mas afinal, o que é TDD?
+
+Imagine que você está construindo uma casa. Antes de começar, você faz um plano detalhado de como tudo deve ser.
+O desenvolvimento guiado por testes, ou TDD (Test Driven Development), segue uma ideia semelhante, mas no mundo da programação.
+Em vez de começar escrevendo o código da aplicação, você começa escrevendo testes para o código que ainda nem existe.
+Parece estranho, né? Mas tem um motivo muito bom por trás disso!
+
+O TDD é como um mini ciclo de três etapas:
+
+Escrever um teste que falha: porque o código que ele testa ainda não foi escrito.
+
+Escrever o código mínimo necessário para passar no teste: nesse momento, você faz o teste passar, mas sem se preocupar em deixar o código bonito ou perfeito.
+
+Refatorar o código: agora, sim, você melhora o código, garantindo que ele esteja bem estruturado e limpo, sem alterar seu comportamento.
+
+Este ciclo é conhecido como Red-Green-Refactor (Vermelho-Verde-Refatorar).
+
+Por que usar TDD?
+Qualidade do código: como você está constantemente testando, é menos provável que bugs passem despercebidos.
+Documentação viva: os testes explicam o que seu código deve fazer, servindo como uma ótima documentação.
+Design melhorado: ao escrever testes primeiro, você precisa pensar na interface e no design do seu código, o que geralmente resulta em um design mais limpo e modular.
+TDD com Java e Spring
+Java é uma linguagem de programação muito popular, e o Spring é um framework que ajuda a construir aplicações robustas em Java.
+Quando combinamos Java com Spring e TDD, temos uma receita poderosa para criar aplicações de alta qualidade.
+
+Estratégias para implementar TDD
+Conheça as ferramentas: para Java, JUnit é a biblioteca mais popular para escrever testes.
+O Spring Boot tem um suporte excelente para testes com integração fácil com JUnit.
+Comece pequeno: se você é iniciante no TDD, comece com partes pequenas e simples do seu código.
+Isso ajuda a pegar o jeito do ciclo TDD.
+Use testes de integração: além dos testes unitários (testando partes isoladas do código), use testes de integração para garantir que diferentes partes da sua aplicação trabalhem bem juntas.
+
+Um exemplo simples
+Vamos ver um exemplo bem simples de como isso pode funcionar. Imagine que você quer criar uma função para somar dois números:
+
+1 - Escreva o teste primeiro:
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class CalculadoraTest {
+
+    @Test
+    public void testSoma() {
+        assertEquals(5, Calculadora.soma(2, 3));
+    }
+}
+
+Este teste vai falhar inicialmente porque a função soma não existe ainda.
+
+2 - Escreva o código para passar no teste:
+
+public class Calculadora {
+
+    public static int soma(int a, int b) {
+        return a + b;
+    }
+}
+
+3 - Refatore se necessário: Neste caso, nosso código já está bastante simples, então, não precisamos refatorar.
+
+O TDD pode parecer contra-intuitivo no início, mas com a prática ele pode transformar a maneira como você desenvolve software,
+tornando-o mais confiável e fácil de manter. Combinar TDD com Java e Spring te dá um conjunto de ferramentas poderoso para construir aplicações robustas.
+Lembre-se, a prática leva à perfeição. Então, comece a praticar TDD em seus projetos e veja a diferença que ele pode fazer!
