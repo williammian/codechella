@@ -1,0 +1,73 @@
+Casos de Uso
+
+Dentro da arquitetura limpa (clean architecture), os casos de uso são definidos na camada de regras de negócio (ou use cases) da arquitetura. Essa camada é responsável por conter a lógica de negócios da aplicação, onde são implementadas as funcionalidades específicas do sistema.
+
+Para definir bem os casos de uso dentro da arquitetura limpa, você pode seguir estas práticas:
+
+- Identificar os requisitos do sistema: antes de tudo, é fundamental entender os requisitos do sistema e as necessidades dos usuários.
+Isso ajudará a determinar quais casos de uso precisam ser implementados.
+- Definir os casos de uso: com base nos requisitos identificados, você pode definir os casos de uso da aplicação.
+Cada caso de uso deve representar uma funcionalidade ou um conjunto de funcionalidades específicas que o sistema oferece aos usuários.
+- Nomear os casos de uso de forma clara e concisa: os nomes dos casos de uso devem ser descritivos e indicativos do que a funcionalidade faz.
+Isso facilitará a compreensão e a comunicação entre os membros da equipe.
+- Identificar os atores envolvidos: para cada caso de uso, identifique os atores (usuários, sistemas externos etc.) que interagem com o sistema e quais são suas responsabilidades dentro do contexto da funcionalidade.
+- Descrever os fluxos de eventos: para cada caso de uso, descreva os fluxos de eventos que representam as diferentes interações entre os atores e o sistema.
+Isso inclui os passos necessários para completar a funcionalidade, bem como os possíveis cenários de exceção.
+- Implementar os casos de uso na camada de regras de negócio: após definir os casos de uso, você pode implementá-los na camada de regras de negócio da arquitetura limpa.
+Cada caso de uso deve ser uma classe ou um componente que encapsula a lógica de negócios correspondente.
+- Testar os casos de uso de forma isolada: certifique-se de testar cada caso de uso de forma isolada para garantir que eles funcionem conforme o esperado.
+Isso pode ser feito utilizando testes unitários e testes de integração.
+Ao seguir essas práticas, você será capaz de definir e implementar os casos de uso de forma eficaz dentro da arquitetura limpa, garantindo que a lógica de negócios da sua aplicação seja bem organizada e de fácil manutenção.
+
+Pensando em nossa aplicação CodeChella, vamos listar algumas ideias gerais de casos de usos, que não estejam diretamente ligadas a usuários:
+
+1. Realizar uma compra de ingresso
+
+Descrição: Este caso de uso permite que um usuário compre ingressos para um evento.
+
+Fluxo principal:
+
+O usuário seleciona o evento desejado.
+O usuário escolhe a quantidade de ingressos que deseja comprar.
+O sistema verifica a disponibilidade de ingressos.
+O usuário fornece as informações de pagamento.
+O sistema processa o pagamento e confirma a compra.
+O sistema emite os ingressos para o usuário.
+2. Visualizar detalhes do evento
+
+Descrição: Este caso de uso permite que um usuário veja os detalhes de um evento específico.
+
+Fluxo principal:
+
+O usuário seleciona o evento desejado.
+O sistema exibe informações sobre o evento, como nome, data, localização, preço dos ingressos etc.
+3. Buscar eventos por categoria
+
+Descrição: Este caso de uso permite que um usuário pesquise eventos por categoria.
+
+Fluxo principal:
+
+O usuário seleciona uma categoria de eventos (por exemplo, música, esportes, teatro etc.).
+O sistema exibe uma lista de eventos relacionados à categoria selecionada.
+4. Gerenciar perfil do usuário
+
+Descrição: Este caso de uso permite que um usuário gerencie seu perfil na aplicação.
+
+Fluxo principal:
+
+O usuário acessa a área de perfil.
+O usuário visualiza e edita suas informações pessoais, como nome, endereço, senha etc.
+5. Cancelar uma compra de ingresso
+
+Descrição: Este caso de uso permite que um usuário cancele uma compra de ingresso antes do evento.
+
+Fluxo principal:
+
+O usuário acessa a lista de compras realizadas.
+O usuário seleciona a compra que deseja cancelar.
+O sistema verifica se o evento ainda não ocorreu.
+O sistema cancela a compra e emite um reembolso, se aplicável.
+
+Esses são apenas alguns exemplos de casos de uso para uma aplicação de venda de ingressos para eventos diversos.
+Cada caso de uso representa uma funcionalidade específica que os usuários podem realizar na aplicação.
+Você pode expandir ou adaptar esses casos de uso de acordo com os requisitos específicos do seu sistema.

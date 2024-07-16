@@ -9,8 +9,8 @@ import jakarta.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
+@Table(name = "usuarios_old")
+public class UsuarioOld {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

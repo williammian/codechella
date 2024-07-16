@@ -1,0 +1,44 @@
+Injeção de dependência e Inversão de controle
+
+Injeção de dependência (DI - Dependency Injection) e inversão de controle (IoC - Inversion of Control) são conceitos
+fundamentais no desenvolvimento de software que visam reduzir o acoplamento entre componentes e facilitar a manutenção,
+teste e extensibilidade do código. Vamos entender melhor cada um desses conceitos.
+
+Injeção de dependência (DI)
+A injeção de dependência é um padrão de projeto em que as dependências de um objeto são fornecidas a ele por meio de
+construtores, métodos de configuração ou até mesmo por meio de parâmetros em métodos, em vez de serem instanciadas
+dentro do próprio objeto. Isso significa que o objeto não é responsável por criar suas próprias dependências, mas por recebê-las de fora.
+
+Por exemplo, em vez de uma classe A instanciar diretamente uma classe B dentro de um de seus métodos,
+a classe B seria injetada na classe A por meio de um construtor ou método de configuração.
+Isso torna a classe A mais flexível, pois pode receber diferentes implementações de B sem precisar ser modificada.
+
+Inversão de controle (IoC)
+A inversão de controle é um princípio de design que complementa a injeção de dependência.
+Ele sugere que a responsabilidade pela configuração e gerenciamento das dependências de um objeto seja invertida, ou seja,
+delegada a um componente externo (geralmente um contêiner de IoC) em vez de ser realizada internamente pelo próprio objeto.
+
+Em outras palavras, em vez de os objetos serem responsáveis por criar e gerenciar suas próprias dependências,
+eles delegam essa responsabilidade a um mecanismo externo. Isso permite uma maior flexibilidade e desacoplamento entre os componentes,
+pois as dependências podem ser facilmente substituídas ou configuradas sem alterar o código dos objetos dependentes.
+
+A injeção de dependência e a inversão de controle são frequentemente usadas juntas para promover um design de software mais flexível, modular e testável.
+Elas facilitam a criação de componentes independentes e reutilizáveis, promovendo a coesão e a separação de responsabilidades.
+
+Um exemplo prático de uso desses conceitos é em frameworks de injeção de dependência, como Spring (Java) ou Angular (JavaScript),
+em que os objetos são configurados e gerenciados externamente por meio de arquivos de configuração ou anotações,
+permitindo uma configuração mais flexível e uma fácil substituição de dependências.
+
+No Spring, os componentes da aplicação são geralmente gerenciados pelo contêiner Spring.
+Para que um objeto seja gerenciado pelo Spring, ele deve ser marcado com uma anotação que o identifique como um componente Spring.
+As anotações mais comuns para isso são @Component, @Service, @Repository e @Controller, dependendo do tipo de componente que está sendo definido.
+
+Uma vez que os componentes da aplicação estão sendo gerenciados pelo Spring, é possível injetar dependências neles usando anotações.
+A anotação mais comum para realizar a injeção de dependência é @Autowired.
+Quando um componente é marcado com @Autowired, o Spring procura automaticamente uma instância adequada do tipo de dependência e a injeta no componente.
+
+Para que o Spring reconheça e gerencie os componentes da aplicação, é necessário configurar o escaneamento de componentes
+no arquivo de configuração do Spring (geralmente um arquivo XML ou uma classe de configuração Java),
+exatamente como fizemos com a nossa classe UsuarioConfig utilizando a anotação @Configuration
+e também anotando nossos métodos com a anotação @Bean, utilizada para definir métodos que produzem instâncias de objetos
+que serão gerenciados pelo contêiner Spring.
