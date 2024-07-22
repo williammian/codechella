@@ -70,4 +70,16 @@ public class Usuario {
         this.nascimento = nascimento;
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", nascimento=" + nascimento +
+                ", email='" + email + '\'' +
+                ", endereco=" + endereco +
+                '}';
+    }
+
 }
