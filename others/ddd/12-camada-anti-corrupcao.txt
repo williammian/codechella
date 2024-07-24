@@ -1,0 +1,33 @@
+Camada Anticorrupção (Anti-Corruption Layer - ACL)
+
+Trata-se de uma técnica utilizada no DDD para isolar um sistema de domínio das influências externas que podem afetar
+negativamente sua integridade e coesão. De forma mais clara, uma Camada de Anticorrupção é uma barreira que protege o
+modelo de domínio interno de um sistema (conhecido como Bounded Context) das influências externas, como sistemas legados,
+APIs de terceiros ou modelos de domínio de outras partes da organização que não estão alinhados.
+
+Essa técnica traz as seguintes vantagens:
+
+Isolamento do Domínio Interno: Uma das principais funções da camada de Anticorrupção é isolar o modelo de domínio
+interno do sistema de influências externas que podem corrompê-lo ou dificultar sua manutenção e evolução.
+Isso permite que o modelo de domínio interno permaneça coeso e consistente, mesmo em um ambiente onde várias
+influências externas estão presentes.
+
+Tradução de Contexto: A camada de Anticorrupção também é responsável por traduzir conceitos e linguagens entre o
+domínio interno do sistema e o mundo externo. Isso é especialmente importante quando o modelo de domínio interno
+difere significativamente dos modelos de domínio externos ou quando é necessário integrar com sistemas legados que
+possuem uma linguagem e uma lógica diferentes.
+
+Adaptação de Interfaces: Em muitos casos, a camada de Anticorrupção também é responsável por adaptar as interfaces
+entre o sistema e o mundo externo. Isso pode envolver a criação de adaptadores ou tradutores que convertam os dados
+e as mensagens entre os formatos utilizados pelo sistema e pelos sistemas externos.
+
+Facilita a Evolução Independente: Ao isolar o modelo de domínio interno do sistema, a camada de Anticorrupção
+permite que diferentes partes do sistema evoluam de forma independente umas das outras. Isso é importante em sistemas
+complexos onde mudanças em uma parte do sistema não devem afetar outras partes de forma indesejada.
+
+Promove a Manutenibilidade: Ao manter uma separação clara entre o modelo de domínio interno e as influências externas,
+a camada de Anticorrupção ajuda a promover a manutenibilidade do sistema. Isso facilita a compreensão, a depuração
+e a modificação do sistema ao longo do tempo.
+
+Em resumo, protege o modelo de domínio interno de um sistema das influências externas e garante sua coesão, integridade
+e evolução contínua. Ele desempenha um papel crucial na criação de sistemas flexíveis, escaláveis e orientados ao domínio.

@@ -1,0 +1,18 @@
+Modelos de domínio
+
+No Domain-Driven Design (DDD), existem vários blocos de construção que são fundamentais para criar modelos de domínio
+expressivos e eficazes. Aqui estão os principais blocos de construção do DDD:
+
+Entidades (Entities): Entidades são objetos distintos e identificáveis que possuem uma identidade única ao longo do tempo.
+Elas representam objetos do mundo real que têm uma vida própria e são geralmente modeladas como objetos persistentes no sistema.
+
+Value Objects: Value Objects são objetos que representam um valor simples ou conjunto de valores que são imutáveis e
+comparáveis pela totalidade de seus atributos. Eles são úteis para representar conceitos como datas, horários,
+coordenadas geográficas, entre outros, e são geralmente utilizados como atributos de Entidades.
+
+Agregados (Aggregates): Agregados são conjuntos de objetos relacionados que são tratados como uma única unidade de transação.
+Eles encapsulam a consistência e as regras de negócio dentro do domínio e garantem a integridade dos dados.
+Uma Entidade dentro de um Agregado é chamada de Raiz de Agregado (Aggregate Root).
+
+Fábricas (Factories): Fábricas são objetos responsáveis por criar e instanciar Entidades complexas ou Agregados.
+Elas encapsulam a lógica de criação de objetos complexos e podem ajudar a garantir a consistência do estado inicial desses objetos.

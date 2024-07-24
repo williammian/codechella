@@ -1,7 +1,7 @@
 package br.com.wm.codechella;
 
-import br.com.wm.codechella.domain.entities.usuario.Usuario;
-import br.com.wm.codechella.infra.gateways.RepositorioDeUsuarioEmArquivo;
+import br.com.wm.codechella.clean.domain.entities.usuario.Usuario;
+import br.com.wm.codechella.clean.infra.gateways.RepositorioDeUsuarioEmArquivo;
 
 import java.time.LocalDate;
 

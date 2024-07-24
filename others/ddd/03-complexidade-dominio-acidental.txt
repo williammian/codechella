@@ -1,0 +1,31 @@
+Complexidade de domínio e Complexidade acidental
+
+No contexto do Domain-Driven Design (DDD), as diferenças entre complexidades acidentais e complexidades de domínio são
+fundamentais para compreender os desafios enfrentados durante o desenvolvimento de software.
+Aqui está uma breve explicação de cada uma delas:
+
+Complexidade do domínio:
+
+Refere-se às dificuldades que estão relacionadas à própria natureza do problema que está sendo resolvido.
+Isso inclui a complexidade das regras de negócio, a interação entre diferentes partes do sistema,
+a necessidade de manter a consistência e a integridade dos dados, entre outros.
+
+Exemplos: Modelagem de regras de negócio complexas, gestão de agregados com comportamentos complexos,
+sincronização de dados entre diferentes bounded contexts, resolução de problemas de consistência em sistemas
+distribuídos, entre outros.
+
+Complexidade acidental:
+
+Refere-se a dificuldades e desafios que são impostos ao desenvolvimento de software, mas que não estão diretamente
+relacionados ao domínio do problema em si. Essas dificuldades são frequentemente causadas por tecnologias inadequadas,
+ferramentas ineficientes, processos de desenvolvimento complicados, ou requisitos não funcionais desnecessariamente
+complexos, bem como a própria dificuldade em lidar com código legado.
+
+Exemplos: Problemas de configuração de infraestrutura, dependências excessivas de bibliotecas ou frameworks,
+sobrecarga de processos burocráticos, falta de automação em tarefas repetitivas, entre outros.
+
+Uma das principais metas do DDD é lidar eficazmente com a complexidade do negócio, criando modelos de domínio
+expressivos e flexíveis que refletem com precisão as necessidades do negócio. A complexidade acidental pode distrair
+a equipe de desenvolvimento do foco principal do DDD, que é a modelagem do domínio. Se a equipe estiver gastando uma
+quantidade significativa de tempo lidando com problemas de infraestrutura ou tecnológicos, isso pode prejudicar a
+qualidade e a eficácia da modelagem de domínio.

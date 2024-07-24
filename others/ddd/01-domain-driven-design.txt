@@ -1,0 +1,44 @@
+Domain-Driven Design
+
+Domain-Driven Design (DDD) é uma abordagem de design de software que se concentra na modelagem do domínio do problema
+em questão, criando um modelo rico e expressivo que captura a lógica de negócios do projeto.
+Foi introduzido por Eric Evans em seu livro "Domain-Driven Design: Atacando as complexidades no coração do software".
+
+Suas principais características são:
+
+Modelagem do Domínio: O foco principal do DDD é na modelagem do domínio, ou seja, na compreensão profunda do problema
+que o software está resolvendo. Isso envolve identificar entidades, agregados, serviços, eventos, valores
+e regras de negócio relevantes.
+
+Linguagem Ubíqua: DDD promove o uso de uma linguagem ubíqua, na qual termos do domínio são utilizados de forma
+consistente tanto na comunicação com especialistas do domínio quanto no código-fonte do sistema.
+Isso ajuda a alinhar a compreensão entre a equipe de desenvolvimento e os stakeholders do negócio.
+
+Padrões de Projeto Estratégicos e Táticos: O DDD oferece padrões de projeto tanto em nível estratégico quanto tático
+para ajudar a desenvolver modelos de domínio eficazes e expressivos.
+Isso inclui conceitos como Agregados, Entidades, Repositórios, Serviços de Domínio, Value Objects, etc.
+
+Bounded Context: Um Bounded Context é um limite dentro do qual um modelo de domínio é definido e aplicado de forma consistente.
+Em sistemas complexos, pode haver vários bounded contexts que colaboram entre si.
+
+Context Mapping: O Context Mapping é uma técnica para mapear os bounded contexts e definir como eles se comunicam entre si.
+Existem padrões específicos, como Partnership, Shared Kernel, Customer-Supplier, etc.
+
+Implementação Orientada a Domínio: DDD sugere que a implementação de software deve refletir o modelo de domínio o mais próximo possível.
+Isso significa que o código deve ser organizado em torno das estruturas do domínio, utilizando linguagens de programação
+que permitam uma expressão mais direta do modelo.
+
+Event Sourcing: Uma técnica em que o estado de um sistema é determinado pela sequência de eventos que ocorreram.
+Isso é útil para sistemas em que é importante manter um histórico completo de todas as alterações de estado.
+
+Teste de Unidade de Domínio: O DDD promove a ideia de testar o código de domínio usando testes de unidade que se
+concentram em validar as regras de negócio.
+
+Evolução Contínua do Modelo de Domínio: O DDD reconhece que o modelo de domínio evolui ao longo do tempo à medida
+que o entendimento do problema melhora. Portanto, a modelagem de domínio é um processo contínuo e iterativo.
+
+Colaboração com especialistas do Domínio: Uma parte fundamental do DDD é a colaboração próxima entre desenvolvedores
+de software e especialistas no domínio do problema, para garantir que o modelo de domínio seja preciso e útil.
+
+Em resumo, Domain-Driven Design é uma abordagem para o desenvolvimento de software que coloca a modelagem do domínio
+no centro do processo de design, com foco na comunicação clara e na expressão precisa das regras de negócio.

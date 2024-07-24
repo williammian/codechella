@@ -1,5 +1,7 @@
 package br.com.wm.codechella.domain.entities.usuario;
 
+import br.com.wm.codechella.clean.domain.entities.usuario.FabricaDeUsuario;
+import br.com.wm.codechella.clean.domain.entities.usuario.Usuario;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,0 +1,35 @@
+Linguagem Onipresente - Ubíqua
+
+A "linguagem onipresente" (Ubiquitous Language) é um conceito fundamental dentro do Domain-Driven Design (DDD).
+Ela se refere a uma linguagem compartilhada e comum, que é utilizada por todas as partes envolvidas no desenvolvimento
+de software, incluindo desenvolvedores, analistas de negócios e stakeholders do projeto.
+Esta linguagem é composta por termos específicos do domínio de negócios sendo abordado pelo software.
+Os principais objetivos ao adotá-la são:
+
+Clareza: A linguagem onipresente visa eliminar ambiguidades e garantir que todos os membros da equipe tenham uma
+compreensão clara e precisa dos requisitos do negócio. Ao utilizar termos consistentes em todas as discussões e
+documentos relacionados ao projeto, a comunicação entre as partes interessadas é facilitada.
+
+Alinhamento Conceitual: Ao adotar uma linguagem onipresente, a equipe de desenvolvimento e os stakeholders do negócio
+estão alinhados conceitualmente. Isso significa que todos compartilham uma compreensão comum dos elementos essenciais
+do domínio de negócios, como entidades, processos, regras de negócio e fluxos de trabalho.
+
+Tradução direta para o código: Uma das principais vantagens da linguagem onipresente é que ela pode ser diretamente
+traduzida para o código-fonte do software. Isso permite que o código seja mais expressivo e reflita fielmente o modelo
+de domínio subjacente.
+
+Facilita a modelagem de domínio: Uma linguagem onipresente bem definida é essencial para uma modelagem de domínio eficaz.
+Ao usar termos do domínio de negócios em vez de jargões técnicos, os modelos de domínio se tornam mais acessíveis e
+úteis para todas as partes interessadas.
+
+Refatoração e evolução: A linguagem onipresente também facilita a refatoração e a evolução do software ao longo do tempo.
+Como todos estão falando a mesma linguagem, é mais fácil ajustar e expandir o código existente de acordo com as mudanças
+nos requisitos do negócio.
+
+Participação dos especialistas do domínio: A definição da linguagem onipresente muitas vezes requer a colaboração
+estreita com especialistas do domínio, ou seja, pessoas que têm um profundo conhecimento do negócio sendo automatizado
+pelo software. Isso ajuda a garantir que a linguagem seja precisa e relevante.
+
+Em resumo, a linguagem onipresente desempenha um papel crucial no sucesso de um projeto de desenvolvimento de software
+baseado em Domain-Driven Design, facilitando a comunicação, alinhando conceitos e garantindo que o código reflita
+fielmente o modelo de domínio do negócio.

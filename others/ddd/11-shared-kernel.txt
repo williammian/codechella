@@ -1,0 +1,34 @@
+Shared Kernel (Núcleo ou Contexto Compartilhado)
+
+Trata-se de uma abordagem usada no DDD para lidar com situações em que dois ou mais Bounded Contexts
+(Contextos Delimitados) precisam compartilhar partes de seus modelos de domínio.
+
+Ele refere-se a uma porção comum de código, considerada o "núcleo" compartilhado de funcionalidades e
+conceitos que são essenciais para os contextos envolvidos.
+
+O Shared Kernel oferece as seguintes vantagens :
+
+Compartilhamento Controlado: O Shared Kernel é uma forma de compartilhamento controlado de código entre contextos
+delimitados. Em vez de permitir que os contextos compartilhem aleatoriamente partes de seus modelos de domínio,
+o Shared Kernel formaliza e controla esse compartilhamento, garantindo que apenas as partes necessárias e
+essenciais sejam compartilhadas.
+
+Evita Redundâncias: Uma das principais motivações para usar o Shared Kernel é evitar a duplicação de código e a
+redundância de conceitos entre contextos delimitados. Em vez de recriar o mesmo conceito ou funcionalidade em múltiplos
+contextos, o Shared Kernel permite que esses contextos compartilhem uma única implementação.
+
+Promove a Coesão: O Shared Kernel promove a coesão entre contextos delimitados, garantindo que conceitos relacionados
+sejam tratados de forma consistente e compartilhada. Isso ajuda a manter a consistência e a integridade do modelo de
+domínio em todo o sistema.
+
+Facilita a Comunicação e a Colaboração: Ao compartilhar um núcleo comum de funcionalidades e conceitos,
+o Shared Kernel facilita a comunicação e a colaboração entre diferentes partes do sistema.
+Ele estabelece uma base comum de entendimento e permite que os contextos delimitados trabalhem de forma mais eficaz juntos.
+
+Requer Coordenação: Embora o Shared Kernel possa ser útil em certas situações, é importante destacar que seu uso requer
+coordenação e cuidado. Mudanças no Shared Kernel podem afetar todos os contextos que o compartilham, o que pode levar
+a dependências indesejadas e problemas de manutenção se não for gerenciado adequadamente.
+
+Em resumo, é uma técnica usada para controlar e formalizar o compartilhamento de partes do modelo de domínio entre
+múltiplos Bounded Contexts. Ele promove a reutilização, a coesão e a colaboração entre os contextos envolvidos,
+ajudando a criar sistemas mais coesos, flexíveis e orientados ao domínio.

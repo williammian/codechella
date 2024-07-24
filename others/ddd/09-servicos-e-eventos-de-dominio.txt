@@ -1,0 +1,28 @@
+Serviços e Eventos de domínio
+
+Serviços de Domínio (Domain Services) são objetos que encapsulam operações ou lógicas de negócio que não pertencem
+naturalmente a uma Entidade ou Value Object específico. Eles representam operações ou processos que envolvem múltiplas
+entidades ou que não têm uma responsabilidade claramente atribuída a uma única entidade.
+
+Exemplo: Um serviço de domínio pode ser responsável por calcular o total de uma compra, validar um pedido,
+calcular estatísticas com base em várias entidades do sistema, entre outros.
+
+Geralmente, os serviços de domínio são implementados como objetos sem estado, concentrando-se na execução de uma tarefa
+específica de forma isolada.
+
+Eventos de Domínio (Domain Events) são eventos que representam mudanças significativas no estado do domínio.
+Eles descrevem uma ocorrência no domínio do problema que é de interesse para outras partes do sistema.
+
+Exemplos: Um evento de domínio pode ser gerado quando um pedido é confirmado, quando um produto é adicionado
+ao carrinho de compras, quando um usuário se registra em um sistema, entre outros.
+
+Geralmente são usados para notificar outras partes do sistema sobre mudanças importantes no estado do domínio.
+Uma de suas características mais importantes é o desacoplamento, que promovem a independência entre diferentes partes
+do sistema, permitindo que processos assíncronos reajam a essas mudanças sem acoplar diretamente as partes envolvidas.
+Também podem ser usados para criar um registro histórico de todas as mudanças significativas no sistema,
+o que pode ser útil para auditoria, análise de dados, entre outras finalidades.
+
+No DDD, serviços de domínio e eventos de domínio são ferramentas importantes para modelar a lógica de negócios
+e as interações no sistema, ajudando a criar sistemas mais flexíveis, escaláveis e orientados ao domínio.
+Eles trabalham em conjunto com outros blocos de construção do DDD, como Entidades, Agregados e Repositórios,
+para criar modelos de domínio expressivos e eficazes.

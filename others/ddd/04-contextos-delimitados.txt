@@ -1,0 +1,38 @@
+Contextos delimitados
+
+Quando você começa a aprender sobre desenvolvimento de software, especialmente em projetos grandes e complexos,
+um conceito que pode realmente fazer a diferença é o de Bounded Contexts (Contextos Limitados).
+Este conceito é uma parte fundamental do Domain-Driven Design (DDD). Eles são usados para definir limites claros
+em um sistema, nos quais os modelos de domínio são aplicados de forma consistente.
+
+Em sistemas grandes e complexos pode haver múltiplos domínios ou subdomínios inter-relacionados.
+Tentar realizar a modelagem do todo pode ocasionar inconsistência na representação real do negócio.
+Sendo assim, cada um desses domínios pode ter sua própria modelagem, regras de negócio e linguagem ubíqua.
+Nesse quesito, os contextos delimitados nos auxiliam a separar esses domínios,
+garantindo que cada um tenha seu próprio modelo de domínio independente, com contextos menores.
+
+Imagine que você está construindo um software para uma grande loja online. Essa loja tem várias partes,
+como o catálogo de produtos, o sistema de pedidos, o gerenciamento de clientes, etc.
+Cada uma dessas partes possui suas próprias regras e lógicas específicas. Um Bounded Context é, basicamente, uma
+fronteira que define onde essas regras e lógicas se aplicam e onde elas não se aplicam. Dentro de cada Bounded Context,
+você tem um modelo (uma representação do sistema ou de parte dele) que é consistente e válido.
+
+O uso dessa estratégia permite que sistemas complexos sejam mais flexíveis e escaláveis, já que diferentes partes do
+sistema podem evoluir de forma independente umas das outras. Isso facilita a manutenção e a expansão do sistema ao
+longo do tempo. Além disso, é possível evitar ambiguidades e conflitos entre diferentes partes do sistema.
+Isso facilita a comunicação entre as equipes de desenvolvimento e garante que cada parte do sistema tenha um
+propósito claro e bem definido.
+
+Para que o uso de contextos delimitados seja eficiente, é importante que a fronteira entre contextos esteja clara
+para todos. Para isso, é comum utilizarmos um Mapa de contextos, ou Context Mapping, que é uma técnica para mapear
+e definir os limites entre os Bounded Contexts em um sistema. Existem diferentes estratégias de mapeamento,
+como Partnership, Shared Kernel, Customer-Supplier, etc., dependendo das relações entre os contextos.
+
+Outra preocupação também é referente à comunicação entre contextos, que geralmente requer o estabelecimento
+de mecanismos de comunicação como tradução de mensagens, eventos ou integração de sistemas.
+
+Em resumo, sem Bounded Contexts, seu software pode se tornar uma grande bagunça de código, onde tudo está
+interligado e dependente um do outro. Isso torna o software difícil de entender, de manter e de evoluir.
+Ao definir Bounded Contexts claros, você separa o sistema em partes menores e mais gerenciáveis,
+cada uma com seu próprio domínio de problema.
+Isso facilita muito o desenvolvimento, a manutenção e a evolução do software.
